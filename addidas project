@@ -1,0 +1,402 @@
+
+
+/*sorush ghorbanimehr*/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>adidas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: helvetica;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            color: inherit;
+        }
+
+        div.container {
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        /* HEADER */
+
+        header {
+            background: rgba(0, 0, 0, .5);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 900;
+    
+        }
+
+        div#brand img {
+            width: 110px;
+            vertical-align: middle;
+        }
+
+        div#brand,
+        nav {
+            display: inline-block;
+        }
+
+        div#brand {
+            width: 20%;
+        }
+
+        nav {
+            width: 79%;
+            text-align: right;
+        }
+
+        nav>a {
+            padding: 1em 1.5em;
+            text-transform: uppercase;
+        }
+
+        nav>a:last-child {
+            border: 1px solid;
+            transition: .5s;
+        }
+
+        nav>a:last-child:hover {
+            background: white;
+            color: black;
+        }
+
+        /* END OF HEADER */
+
+        /* SLIDESHOW */
+
+        section.slideshow {
+            background: url(./images/backs/slideshow.webp);
+            height: 400px;
+            background-size: cover;
+        }
+
+        h2 {
+            text-align: center;
+            border-bottom: 1px solid;
+            width: 30%;
+            margin-right: auto;
+            margin-left: auto;
+            text-transform: uppercase;
+            font-size: 2em;
+        }
+
+
+        /* SECTION SHOES */
+
+        div.shoe {
+            display: inline-block;
+            width: 20%;
+
+            margin: 1%;
+            text-align: left;
+        }
+
+        div.row {
+            text-align: center;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+
+        div.shoe>img {
+            width: 100%;
+        }
+
+        div.shoe>h3,
+        div.shoe>p {
+            margin-left: 5px;
+        }
+
+        div.cta>a {
+            background: black;
+            color: white;
+            padding: 1em 3em;
+        }
+
+        div.cta {
+            text-align: center;
+        }
+
+        section {
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
+        div.shoe {
+            transition: all .5s;
+        }
+
+        div.shoe:hover {
+            box-shadow: 4px 5px 10px 0px black;
+        }
+
+        section.slideshow#women {
+            background: url(./images/backs/woman-slide.webp);
+            background-size: cover;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding: 2em 10%;
+        }
+
+        footer div.item {
+            text-align: left;
+        }
+
+        footer li {
+            list-style-type: none;
+            line-height: 1.5;
+        }
+
+        footer ul {
+            padding: 0;
+        }
+
+        footer div.item {
+            display: inline-block;
+            width: 20%;
+            margin: 1%;
+        }
+
+        footer div.item img {
+            width: 200px;
+            opacity: .5;
+        }
+
+        div.shoe#selected {
+            position: relative;
+        }
+
+        div#badge {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: red;
+            padding: 5px 15px;
+        }
+
+        div.desc h3 {
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 10px;
+            margin-top: 0;
+
+        }
+
+        section.slideshow {
+            position: relative;
+        }
+
+        div.desc {
+            /* background: black; */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10%;
+        }
+
+        div#privacy {
+            background: black;
+            color: white;
+            padding: 1em 2em;
+            position: fixed;
+            left: -15%;
+            bottom: 20%;
+            z-index: 1;
+            transition: .5s;
+        }
+
+        div#privacy:hover {
+            left: 0;
+        }
+
+        div#privacy a {
+            background: white;
+            color: black;
+            padding: .2em;
+            margin-left: 1em;
+            display: inline-block;  
+          
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="privacy">
+        our cookie and privacy <a href="">accept cookie</a>
+    </div>
+
+    <header>
+        <div class="container">
+            <div id="brand">
+                <img src="./images/logo.png" alt="adidas logo">
+            </div>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">men</a>
+                <a href="#">women</a>
+                <a href="#">kids</a>
+                <a href="#">sports</a>
+                <a href="#">shop now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="slideshow">
+        <div class="desc">
+            <h3>Best Sellers</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis</p>
+            <a href="#">SHOP MEN</a>
+        </div>
+    </section>
+
+
+    <!-- MEN SHOES -->
+    <section>
+        <h2>men</h2>
+        <div class="container">
+            <div class="row">
+
+                <!-- MODEL 1 -->
+                <div class="shoe">
+                    <img src="./images/men/model1.jpg" alt="model 1">
+                    <h3>Model 1</h3>
+                    <p>price: 100$</p>
+                </div>
+
+                <!-- MODEL 2 -->
+                <div class="shoe" id="selected">
+                    <div id="badge">NEW</div>
+                    <img src="./images/men/model2.jpg" alt="model 2">
+                    <h3>Model 2</h3>
+                    <p>price: 200$</p>
+                </div>
+
+                <!-- MODEL 3 -->
+                <div class="shoe">
+                    <img src="./images/men/model3.jpg" alt="model 3">
+                    <h3>Model 3</h3>
+                    <p>price: 150$</p>
+                </div>
+
+                <!-- MODEL 4 -->
+                <div class="shoe">
+                    <img src="./images/men/model4.jpg" alt="model 4">
+                    <h3>Model 4</h3>
+                    <p>price: 90$</p>
+                </div>
+            </div>
+
+            <div class="cta">
+                <a href="#">See More Men Shoes</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="slideshow" id="women">
+    </section>
+
+
+    <!-- WOMEN SHOES -->
+    <section>
+        <h2>women</h2>
+        <div class="container">
+            <div class="row">
+
+                <!-- MODEL 1 -->
+                <div class="shoe">
+                    <img src="./images/women/model1.jpg" alt="model 1">
+                    <h3>Model 1</h3>
+                    <p>price: 100$</p>
+                </div>
+
+                <!-- MODEL 2 -->
+                <div class="shoe" id="selected">
+                    <img src="./images/women/model2.jpg" alt="model 2">
+                    <h3>Model 2</h3>
+                    <p>price: 200$</p>
+                </div>
+
+                <!-- MODEL 3 -->
+                <div class="shoe">
+                    <img src="./images/women/model3.jpg" alt="model 3">
+                    <h3>Model 3</h3>
+                    <p>price: 150$</p>
+                </div>
+
+                <!-- MODEL 4 -->
+                <div class="shoe">
+                    <img src="./images/women/model4.jpg" alt="model 4">
+                    <h3>Model 4</h3>
+                    <p>price: 90$</p>
+                </div>
+            </div>
+
+            <div class="cta">
+                <a href="#">See More Women Shoes</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="row">
+            <div class="item">
+                <h4>Shortcuts</h4>
+                <ul>
+                    <li>home</li>
+                    <li>men</li>
+                    <li>women</li>
+                    <li>kids</li>
+                    <li>sports</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h4>Shortcuts</h4>
+                <ul>
+                    <li>home</li>
+                    <li>men</li>
+                    <li>women</li>
+                    <li>kids</li>
+                    <li>sports</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h4>Shortcuts</h4>
+                <ul>
+                    <li>home</li>
+                    <li>men</li>
+                    <li>women</li>
+                    <li>kids</li>
+                    <li>sports</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <img src="./images/logo.png" alt="adidas logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
